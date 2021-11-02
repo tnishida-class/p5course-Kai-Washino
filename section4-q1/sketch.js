@@ -16,9 +16,14 @@ function setup(){
 
   // ここからが本番
   fill(0);
-  const dx = width / scores.length;
+  const dx = width / (scores.length + 1);
   let px, py; // 線を引くために一つ前の点を覚えておく変数
   for(let i = 0; i < scores.length; i++){
-    // BLANK[1]
+    strokeWeight(8);
+    point(dx * (i + 1), scores[i]);
+    strokeWeight(2);
+    if(i  < scores.length - 1){
+      line(dx * (i + 1),  scores[i], dx * (i + 2), scores[i + 1])
+    }
   }
 }
