@@ -14,7 +14,6 @@ function draw(){
   if(20 < count && count < 26){
     size = 10 * (count - 20);
   }
-
   else{
     size = 20;
   }
